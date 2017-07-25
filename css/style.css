@@ -1,0 +1,385 @@
+/*
+ Colour palette:
+    primary-dark: #80BD44
+    primary-light: #C2DF93
+    secondary-light: #B3C7DA
+    secondary-dark: #1F3C59
+    
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya:700|Nunito:400,600');
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+
+/*-- MOBILE DEVICE - Content needs to be displayed in 1 column --*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 0.618rem;
+    line-height: 1.618;
+    background-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Alegreya', Times, serif;
+    font-weight: 700;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Add this class to any HTML element that needs clearing float */
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/*-- .content-box styles entire content --*/
+
+.content-box {
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.wrapper {
+    max-width: 100rem;
+}
+
+.logo h1 {
+    color: #80BD44;
+    font-family: 'Cabin Sketch', cursive;
+    text-align: center;
+}
+
+.logo h1 i {
+    color: #C2DF93;
+}
+
+.nav-bg .content-box {
+    margin: 0 1rem 1rem 1rem;
+}
+
+
+/*-- NAVIGATION --*/
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: 'Alegreya', Times, serif;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar li a {
+    display: block;
+    background-color: #B3C7DA;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0 1px 0;
+}
+
+.navbar li a:hover {
+    background-color: #FFF;
+    color: #B3C7DA;
+}
+
+.navbar li:last-child a {
+    margin: 0;
+}
+
+
+/*-- STYLING SLIDER --*/
+
+
+/*
+      NOTE:
+      Slides switch every 6 seconds. 
+      Every slide is exposed for 5 seconds.
+      The difference of 1 second is planned for 
+      CSS transition fade-in/out, so make sure
+      your div with class "mh-image" has set
+      transition for opacity (with duration 
+      of 1 second and type of easing "ease-out") 
+      in stylesheet.
+*/
+
+.mh-image {
+    transition: opacity 1s ease-out;
+    background-color: #1F3C59;
+    color: #1F3C59;
+    position: relative;
+}
+
+.mh-image figure {
+    margin: 0;
+}
+
+.mh-image figure img {
+    width: 100%;
+    height: auto;
+}
+
+.mh-image figure div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url("");
+}
+
+.mh-image figcaption {
+    font-family: "Nunito", Arial, sans-serif;
+    font-weight: 600;
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 80%;
+    background-image: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("");
+    padding: 4%;
+    text-align: center;
+}
+
+
+/*-- STYLING MAIN CONTENT --*/
+
+main {
+    background-color: #1F3C59;
+    color: #FFF;
+}
+
+main .content-box {
+    padding: 1% 3%;
+}
+
+main .content-box h1 {
+    color: #80BD44;
+    text-align: center;
+}
+
+main .content-box ul {
+    margin: 0 0 10% 0;
+}
+
+main .content-box ul li {
+    width: calc(33.33% - 5px);
+    display: inline-block;
+    font-size: 3em;
+    color: #C2DF93;
+    text-align: center;
+    font-family: FontAwesome;
+}
+
+main .content-box ul li a {
+    margin: 0 5px;
+}
+
+main .content-box h4 {
+    font-family: "Nunito", Arial, sans-serif;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+main .content-box figcaption {
+    text-align: left;
+    margin: 2% 0;
+}
+
+#active {
+    color: #B3C7DA;
+}
+
+
+/*-- Styling footer --*/
+
+.footer-bg {
+    background-color: #C2DF93;
+    color: white;
+    padding: 1rem 0;
+}
+
+.footer-bg p {
+    margin: 0;
+}
+
+footer {
+    font-size: 0.5em;
+    text-align: center;
+}
+
+.footer-left,
+.footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+/* Footer left */
+
+.footer-left {
+    width: 85%;
+}
+
+.footer-left i {
+    color: #80BD44;
+    text-align: center;
+}
+
+.footer-left p {
+    display: inline-block;
+    color: white;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-left a {
+    color: white;
+}
+
+
+/* Footer Right */
+
+.footer-right a {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    background-color: #80BD44;
+    border-radius: 2px;
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    line-height: 2em;
+    margin-right: .25em;
+    margin-bottom: .5em;
+}
+
+
+/* TABLET - Content needs to be displayed in 3 columns */
+
+@media screen and (min-width: 35rem) and (max-width: 60rem) {
+    /* font-size has to be 1rem for this viewport*/
+    /* navigation list has to be displayed horizontally
+       and the gap between two list items is 1px */
+    body {
+        font-size: 1rem;
+    }
+    .navbar {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .navbar li {
+        width: calc(33% - 1px);
+        display: inline-block;
+    }
+    .navbar li a {
+        margin: 0 0 1px 0;
+    }
+    main .content-box .detailed img {
+        width: 45%;
+        display: inline-block;
+        text-align: center;
+        float: left;
+    }
+    main .content-box .detailed figcaption {
+        text-align: left;
+        float: right;
+        width: 50%;
+        margin-top: 0;
+    }
+}
+
+
+/* DESKTOP - Content needs to be displayed in 4 columns */
+
+@media screen and (min-width: 60rem) {
+    body {
+        font-size: 1.618rem;
+    }
+    .navbar {
+        width: 100%;
+    }
+    .navbar li {
+        width: calc(33.3% - 5px);
+        display: inline-block;
+    }
+    /* navigation list has to be displayed horizontally
+       and the gap between two list items is 5px */
+    .navbar li a {
+        margin: 0 0 5px 0;
+    }
+    /* Entire content is aligned left (.content-box) */
+    .content-box {
+        text-align: left;
+    }
+    /* .wrapper has to be aligned in the middle of viewport */
+    .wrapper {
+        text-align: center;
+    }
+    main .content-box{
+        padding: 0 7%;
+    }
+    
+    main .content-box h1 {
+        text-align: left;
+    }
+    main .content-box ul {
+        width: 7%;
+        float: left;
+        margin-bottom: 0;
+    }
+    main .content-box .detailed img {
+        width: 30%;
+        float: left;
+        display: inline-block;
+    }
+    main .content-box .detailed figcaption {
+        width: 63%;
+        float: right;
+        margin-top: 0;
+    }
+    main .content-box ul li {
+        display: block;
+        font-size: 2em;
+    }
+    main .content-box ul li a {
+        display: block;
+    }
+}
